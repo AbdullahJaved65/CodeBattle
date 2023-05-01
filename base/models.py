@@ -11,7 +11,7 @@ class User(AbstractUser):
     # avatar
     
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
     
 
 class Event(models.Model):
