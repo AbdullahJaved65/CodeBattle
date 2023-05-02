@@ -2,24 +2,26 @@
 
 {% block content %}
 
-<section>
-<h3>Events<h3>
-    <div id = 'events--list'>
-        {% for event in events %}
-        <div>
-            {{ event.name }}
+    <section>
+        <h3>Events</h3>
+        <div id='events--list'>
+            {% for event in events %}
+                <a href="{% url 'event' event.id %}">
+                    <div>
+                        {{ event.name }}
+                    </div>
+                </a>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</section>
+    </section>
 
-<section>
-    <h3>Users<h3>
-        <div id = 'events--list'>
-             {% for user in users %}
-            <div>
-                {{ user.name }}
-            </div>
+    <section>
+        <h3>Users</h3>
+        <div id='events--list'>
+            {% for user in users %}
+                <div>
+                    {{ user.name }}
+                </div>
             {% endfor %}
         </div>
     </section>
