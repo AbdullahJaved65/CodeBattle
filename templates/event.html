@@ -2,5 +2,15 @@
 
 {% block content %}
     <h1>{{ event.name }}</h1>
+    <a href="{% url 'registration_confirmation' event.id %}">Register</a>
     <p>{{ event.description }}</p>
+    <div>
+        <h3>Event Participants</h3>
+        {% for user in event.participants.all %}
+            <li>
+                <strong>{{ user.name }}</strong>
+            </li>
+        {% endfor %}
+
+    </div>
 {% endblock content %}

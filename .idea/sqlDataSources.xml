@@ -2,7 +2,24 @@
 <project version="4">
   <component name="DdlMappings">
     <mapping uuid="86c5e3d7-b155-40fa-a35a-0626860ae2b4" name="CodeBattleDatabase Mapping">
-      <data-sources db="99f43269-91a2-42d3-8003-dcfbeb003335" ddl="2fff0ac4-a606-467f-871f-904e3c70aab7" />
+      <data-sources db="99f43269-91a2-42d3-8003-dcfbeb003335" ddl="72c3ad19-9bbb-4f07-add3-efc136db727b" />
     </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="72c3ad19-9bbb-4f07-add3-efc136db727b" />
+          <option name="name" value="CodeBattleDatabase (DDL)" />
+          <option name="dbmsName" value="SQLITE" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/db.sqlite3" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
   </component>
 </project>
