@@ -15,6 +15,12 @@ def user_page(request, pk):
     return render(request, 'profile.html', context)
 
 
+def account_page(request):
+    user = request.user
+    context = {'user': user}
+    return render(request, 'account.html', context)
+
+
 def event_page(request, pk):
     event = Event.objects.get(id=pk)
     context = {'event': event}
