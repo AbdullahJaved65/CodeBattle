@@ -2,7 +2,13 @@
 
 {% block content %}
     <h1>{{ event.name }}</h1>
-    <a href="{% url 'registration_confirmation' event.id %}">Register</a>
+    {% if registered %}
+        <p>You are already registered for {{ event.name }}</p>
+    {% else %}
+        <a href="{% url 'registration_confirmation' event.id %}">Register</a>
+    {% endif %}
+
+    <a href="{% url 'project-submission' event.id %}">Submit Project</a>
     <p>{{ event.description }}</p>
     <div>
         <h3>Event Participants</h3>

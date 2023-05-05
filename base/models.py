@@ -16,8 +16,10 @@ class User(AbstractUser):
 
 class Event(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField(max_length=500, null=True, blank=True)
-    participants = models.ManyToManyField(User, blank=True)
+    description = models.TextField(max_length=500,
+                                   null=True, blank=True)
+    participants = models.ManyToManyField(User,
+                                          blank=True, related_name='events')
     date = models.DateTimeField()
     upadated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)

@@ -2,4 +2,11 @@
 
 {% block content %}
     <h1>Hello! {{ request.user.name }}</h1>
+
+    <div>
+        {% for event in user.events.all %}
+            <a href="{% url 'event' event.id %}">{{ event.name }}</a>
+        {% endfor %}
+
+    </div>
 {% endblock content %}
